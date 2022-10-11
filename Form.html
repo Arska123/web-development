@@ -1,0 +1,63 @@
+<html>
+<body>
+    <form action="/action_page.php">
+            <fieldset style="width:400px">
+                <table>
+                    <legend>Contact information:</legend>
+                            <td>
+                                <label for="fname">First name:</label><br>
+                                <input type="text" id="fname" name="fname" placeholder="First name"><br>
+                                <label for="lname">Last name:</label><br>
+                                <input type="text" id="lname" name="lname" placeholder="Last name"><br>
+                                <label for="email">Email:</label><br>
+                                <input type="text" id="email" name="email" placeholder="Email"><br>
+                                <label for="tel">Phone number:</label><br>
+                                <input type="text" id="tel" name="tel" placeholder="Phone number"><br>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <p>Preferred contact method: </p>
+                                <input type="checkbox" id="Pre_meth" name="Pre_meth" value="Email">
+                                <label for="Pre_meth"> Email</label><br>
+                                <input type="checkbox" id="Pre_meth" name="Pre_meth" value="Phone">
+                                <label for="Pre_meth"> Phone</label><br>
+                                <br>
+                                <br>
+                                <br>
+                            </td>
+                        </table>
+            </fieldset>
+            <br>
+            <fieldset style="width:400px">
+                <table>
+                    <legend>Feedback</legend>
+                    <tr></tr>
+                        <td>
+                            <label for="msub">Message subject:</label>
+                            <input type="msub" id="msub" name="msub" placeholder="Message subject">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <textarea id="feedback" name="feedback" rows="15" cols="50" placeholder="Feedback space"></textarea><br>
+                            <br>
+                            <laber for="add_file">Attach a file:</laber>
+                            <input type="file" id="add_file" name="add_file">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" value="Send">
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+    </form>
+</body>
+</html>
