@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task 8 - Loop Tasks</title>
+        <style>
+            body {
+                font-family: sans-serif;
+                font-weight: normal;
+            }
+            td input {
+                height: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h4>1.) Factorials</h1>
+
+        <table>
+            <tr>
+                <td><input id="Factorial"/></td>
+                <td><button type="button" onclick = factorialCalculation()>=</button></td>
+                <td><p id="result1"></p></td>
+            </tr>
+        </table>
+
+        <br>
+
+        <h4>2.) Adds digits of a given number</h4>
+
+        <table>
+            <tr>
+                <td><input id="addDigits"/></td>
+                <td><button type="button" onclick = additionOfDigits()>=</button></td>
+                <td><p id="result2"></p></td>
+            </tr>
+        </table>
+
+        <br>
+
+        <h4>3.) Sum of odd and even numbers</h4>
+
+        <table>
+            <tr>
+                <td><input id="odd_even"/></td>
+                <td><button type="button" onclick = OddAndEven()>=</button></td>
+            </tr>
+            <tr>
+                <td><p>Sum of even numbers:</p></td>
+                <td><p id="resultEven"></p></td>
+            </tr>
+            <tr>
+                <td><p>Sum of odd numbers:</p></td>
+                <td><p id="resultOdd"></p></td>
+            </tr>
+        </table>
+
+        <script>
+            function factorialCalculation(){
+                var factorial = Number(document.getElementById("Factorial").value);
+
+                let result = 1;
+
+                for (let i = 1; i <= factorial; i++) {
+                    result *= i;
+                }
+                
+                document.getElementById("result1").innerHTML = result;
+            }
+
+            function additionOfDigits(){
+                var addition = Number(document.getElementById("addDigits").value);
+
+                let i = addition;
+                let result = 0;
+
+                while(i > 0){
+                    result += i
+                    i--;
+                }
+                
+                document.getElementById("result2").innerHTML = result;
+            }
+
+            function OddAndEven(){
+                var addition = Number(document.getElementById("odd_even").value);
+
+                let i = addition;
+                let result1 = 0;
+                let result2 = 0;
+
+                while(i > 0){
+                    if(i%2 == 0){
+                        result1 += i
+                    }
+                    else{
+                        result2 += i
+                    }
+                    i--;
+                }
+                
+                document.getElementById("resultEven").innerHTML = result1;
+                document.getElementById("resultOdd").innerHTML = result2;
+            }
+            
+        </script>
+    </body>
+</html>
